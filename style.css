@@ -1,0 +1,5 @@
+body { font-family: system-ui, sans-serif; max-width: 420px; margin: 60px auto; padding: 0 16px; }
+h1 { display: flex; align-items: center; gap: 12px; }
+form { display: flex; gap: 8px; }
+input { flex: 1; padding: 8px; }
+li { padding: 6px 0; }
