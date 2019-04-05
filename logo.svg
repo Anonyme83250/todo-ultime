@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <!-- Logo v2 -->
-  <rect width="64" height="64" rx="14" fill="#3b82f6"/>
-  <text x="32" y="44" font-size="36" text-anchor="middle" fill="#fff" font-family="Arial">T</text>
+  <!-- Logo v3 -->
+  <circle cx="32" cy="32" r="30" fill="#3b82f6"/>
+  <path d="M18 33l9 9 19-21" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
