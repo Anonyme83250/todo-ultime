@@ -9,8 +9,11 @@ form.addEventListener('submit', function (e) {
   if (!input.value) return;
   var li = document.createElement('li');
   li.textContent = input.value;
+  li.addEventListener('click', function () {
+    li.classList.toggle('done');
+  });
   list.appendChild(li);
   input.value = '';
 });
 
-// TODO : cocher, supprimer, sauvegarder
+// TODO : supprimer, sauvegarder
