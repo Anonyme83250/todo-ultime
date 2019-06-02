@@ -6,10 +6,10 @@ var list = document.getElementById('list');
 
 form.addEventListener('submit', function (e) {
   e.preventDefault();
-  if (!input.value) return;
+  if (!input.value.trim()) return;
   var li = document.createElement('li');
   var span = document.createElement('span');
-  span.textContent = input.value;
+  span.textContent = input.value.trim();
   var del = document.createElement('button');
   del.type = 'button';
   del.className = 'del';
