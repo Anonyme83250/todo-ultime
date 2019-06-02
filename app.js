@@ -8,7 +8,17 @@ form.addEventListener('submit', function (e) {
   e.preventDefault();
   if (!input.value) return;
   var li = document.createElement('li');
-  li.textContent = input.value;
+  var span = document.createElement('span');
+  span.textContent = input.value;
+  var del = document.createElement('button');
+  del.type = 'button';
+  del.className = 'del';
+  del.textContent = '×';
+  del.addEventListener('click', function () {
+    li.remove();
+  });
+  li.appendChild(span);
+  li.appendChild(del);
   li.addEventListener('click', function () {
     li.classList.toggle('done');
   });
@@ -16,4 +26,4 @@ form.addEventListener('submit', function (e) {
   input.value = '';
 });
 
-// TODO : supprimer, sauvegarder
+// TODO : sauvegarder
