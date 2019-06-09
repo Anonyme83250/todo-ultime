@@ -14,7 +14,8 @@ form.addEventListener('submit', function (e) {
   del.type = 'button';
   del.className = 'del';
   del.textContent = '×';
-  del.addEventListener('click', function () {
+  del.addEventListener('click', function (e) {
+    e.stopPropagation();
     li.remove();
   });
   li.appendChild(span);
