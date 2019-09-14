@@ -4,7 +4,7 @@ var KEY = 'todo-ultime';
 var form = document.getElementById('form');
 var input = document.getElementById('task');
 var list = document.getElementById('list');
-var tasks = JSON.parse(localStorage.getItem(KEY));
+var tasks = JSON.parse(localStorage.getItem(KEY)) || [];
 
 function save() {
   localStorage.setItem(KEY, JSON.stringify(tasks));
