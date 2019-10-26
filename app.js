@@ -4,6 +4,7 @@ var KEY = 'todo-ultime';
 var form = document.getElementById('form');
 var input = document.getElementById('task');
 var list = document.getElementById('list');
+var count = document.getElementById('count');
 var tasks = JSON.parse(localStorage.getItem(KEY)) || [];
 
 function save() {
@@ -26,6 +27,8 @@ function render() {
     li.appendChild(del);
     list.appendChild(li);
   });
+  var left = tasks.filter(function (t) { return !t.done; }).length;
+  count.textContent = left + (left > 1 ? ' tâches restantes' : ' tâche restante');
 }
 
 form.addEventListener('submit', function (e) {

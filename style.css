@@ -9,3 +9,4 @@ li { display: flex; align-items: center; justify-content: space-between; padding
 li.done span { text-decoration: line-through; color: #9ca3af; }
 .del { background: none; color: #9ca3af; padding: 0 6px; font-size: 1.3rem; }
 .del:hover { background: none; color: #dc2626; }
+#count { color: #6b7280; font-size: .9rem; }
