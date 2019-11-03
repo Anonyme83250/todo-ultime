@@ -52,5 +52,6 @@ list.addEventListener('click', function (e) {
 });
 
 render();
+input.focus();
 
 // TODO : synchronisation multi-appareils
