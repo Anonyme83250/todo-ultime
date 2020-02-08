@@ -5,15 +5,24 @@ var form = document.getElementById('form');
 var input = document.getElementById('task');
 var list = document.getElementById('list');
 var count = document.getElementById('count');
+var filters = document.getElementById('filters');
+var filter = 'all';
 var tasks = JSON.parse(localStorage.getItem(KEY)) || [];
 
 function save() {
   localStorage.setItem(KEY, JSON.stringify(tasks));
 }
 
+function visible(t) {
+  return filter === 'all' || (filter === 'done') === t.done;
+}
+
 function render() {
   list.innerHTML = '';
-  tasks.forEach(function (t) {
+  Array.prototype.forEach.call(filters.children, function (b) {
+    b.className = b.getAttribute('data-filter') === filter ? 'on' : '';
+  });
+  tasks.filter(visible).forEach(function (t) {
     var li = document.createElement('li');
     li.dataset.id = t.id;
     if (t.done) li.className = 'done';
@@ -48,6 +57,13 @@ list.addEventListener('click', function (e) {
   if (e.target.className === 'del') tasks.splice(i, 1);
   else tasks[i].done = !tasks[i].done;
   save();
+  render();
+});
+
+filters.addEventListener('click', function (e) {
+  var f = e.target.getAttribute('data-filter');
+  if (!f) return;
+  filter = f;
   render();
 });
 

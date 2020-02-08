@@ -10,3 +10,6 @@ li.done span { text-decoration: line-through; color: #9ca3af; }
 .del { background: none; color: #9ca3af; padding: 0 6px; font-size: 1.3rem; }
 .del:hover { background: none; color: #dc2626; }
 #count { color: #6b7280; font-size: .9rem; }
+.filters { display: flex; gap: 6px; margin: 16px 0 4px; }
+.filters button { background: #eef0ff; color: #4f46e5; }
+.filters button.on { background: #4f46e5; color: #fff; }
