@@ -67,6 +67,12 @@ filters.addEventListener('click', function (e) {
   render();
 });
 
+document.getElementById('clear').addEventListener('click', function () {
+  tasks = tasks.filter(function (t) { return !t.done; });
+  save();
+  render();
+});
+
 render();
 input.focus();
 

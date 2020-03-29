@@ -13,3 +13,5 @@ li.done span { text-decoration: line-through; color: #9ca3af; }
 .filters { display: flex; gap: 6px; margin: 16px 0 4px; }
 .filters button { background: #eef0ff; color: #4f46e5; }
 .filters button.on { background: #4f46e5; color: #fff; }
+.link { background: none; color: #6b7280; padding: 0; text-decoration: underline; }
+.link:hover { background: none; color: #dc2626; }
