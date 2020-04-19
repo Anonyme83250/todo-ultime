@@ -6,7 +6,7 @@ var input = document.getElementById('task');
 var list = document.getElementById('list');
 var count = document.getElementById('count');
 var filters = document.getElementById('filters');
-var filter = 'all';
+var filter = localStorage.getItem(KEY + '.filter') || 'all';
 var tasks = JSON.parse(localStorage.getItem(KEY)) || [];
 
 function save() {
@@ -64,6 +64,7 @@ filters.addEventListener('click', function (e) {
   var f = e.target.getAttribute('data-filter');
   if (!f) return;
   filter = f;
+  localStorage.setItem(KEY + '.filter', f);
   render();
 });
 
