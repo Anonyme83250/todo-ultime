@@ -44,6 +44,11 @@ form.addEventListener('submit', function (e) {
   e.preventDefault();
   var text = input.value.trim();
   if (!text) return;
+  var dup = tasks.some(function (t) { return t.text.toLowerCase() === text.toLowerCase(); });
+  if (dup) {
+    input.select();
+    return;
+  }
   tasks.push({ id: Date.now(), text: text, done: false });
   input.value = '';
   save();
