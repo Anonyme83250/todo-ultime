@@ -79,6 +79,11 @@ document.getElementById('clear').addEventListener('click', function () {
   render();
 });
 
+var themeBtn = document.getElementById('theme');
+themeBtn.addEventListener('click', function () {
+  document.body.classList.toggle('dark');
+});
+
 render();
 input.focus();
 

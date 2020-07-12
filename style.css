@@ -15,3 +15,10 @@ li.done span { text-decoration: line-through; color: #9ca3af; }
 .filters button.on { background: #4f46e5; color: #fff; }
 .link { background: none; color: #6b7280; padding: 0; text-decoration: underline; }
 .link:hover { background: none; color: #dc2626; }
+.icon { margin-left: auto; background: none; color: inherit; font-size: 1.2rem; }
+.icon:hover { background: none; opacity: .7; }
+body.dark { background: #12141c; color: #e8eaf0; }
+body.dark input { background: #1b1e29; color: #e8eaf0; border-color: #2a2e3b; }
+body.dark li { border-color: #2a2e3b; }
+body.dark .filters button { background: #1f2336; color: #a5b4fc; }
+body.dark .filters button.on { background: #4f46e5; color: #fff; }
