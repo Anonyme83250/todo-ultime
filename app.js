@@ -80,8 +80,10 @@ document.getElementById('clear').addEventListener('click', function () {
 });
 
 var themeBtn = document.getElementById('theme');
+if (localStorage.getItem(KEY + '.dark') === '1') document.body.classList.add('dark');
 themeBtn.addEventListener('click', function () {
-  document.body.classList.toggle('dark');
+  var on = document.body.classList.toggle('dark');
+  localStorage.setItem(KEY + '.dark', on ? '1' : '0');
 });
 
 render();
