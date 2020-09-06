@@ -8,8 +8,9 @@
 </head>
 <body>
   <h1><img src="logo.svg" alt="" width="40" height="40"> todo-ultime
-    <button id="theme" type="button" class="icon">☾</button></h1>
+    <button id="theme" type="button" class="icon" aria-label="Mode sombre" aria-pressed="false">☾</button></h1>
   <form id="form">
+    <label for="task" class="sr">Nouvelle tâche</label>
     <input id="task" placeholder="Une tâche à faire" autocomplete="off">
     <button>Ajouter</button>
   </form>
@@ -19,7 +20,7 @@
     <button type="button" data-filter="done">Faites</button>
   </div>
   <ul id="list"></ul>
-  <p id="count"></p>
+  <p id="count" aria-live="polite"></p>
   <button type="button" id="clear" class="link">Supprimer les faites</button>
   <script src="app.js"></script>
 </body>

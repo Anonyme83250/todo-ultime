@@ -20,7 +20,9 @@ function visible(t) {
 function render() {
   list.innerHTML = '';
   Array.prototype.forEach.call(filters.children, function (b) {
-    b.className = b.getAttribute('data-filter') === filter ? 'on' : '';
+    var on = b.getAttribute('data-filter') === filter;
+    b.className = on ? 'on' : '';
+    b.setAttribute('aria-pressed', on);
   });
   tasks.filter(visible).forEach(function (t) {
     var li = document.createElement('li');
@@ -80,9 +82,13 @@ document.getElementById('clear').addEventListener('click', function () {
 });
 
 var themeBtn = document.getElementById('theme');
-if (localStorage.getItem(KEY + '.dark') === '1') document.body.classList.add('dark');
+if (localStorage.getItem(KEY + '.dark') === '1') {
+  document.body.classList.add('dark');
+  themeBtn.setAttribute('aria-pressed', 'true');
+}
 themeBtn.addEventListener('click', function () {
   var on = document.body.classList.toggle('dark');
+  themeBtn.setAttribute('aria-pressed', on);
   localStorage.setItem(KEY + '.dark', on ? '1' : '0');
 });
 
