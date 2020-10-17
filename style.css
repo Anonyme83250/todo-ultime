@@ -1,4 +1,4 @@
-body { font-family: system-ui, sans-serif; max-width: 420px; margin: 60px auto; padding: 0 16px; }
+body { line-height: 1.5; font-family: system-ui, sans-serif; max-width: 420px; margin: 60px auto; padding: 0 16px; }
 h1 { display: flex; align-items: center; gap: 12px; }
 form { display: flex; gap: 8px; }
 input { flex: 1; padding: 8px 10px; border: 1px solid #d1d5db; border-radius: 6px; font: inherit; }
@@ -6,6 +6,7 @@ button { padding: 8px 14px; border: 0; border-radius: 6px; background: #4f46e5; 
 button:hover { background: #4338ca; }
 ul { list-style: none; padding: 0; }
 li { display: flex; align-items: center; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #e5e7eb; cursor: pointer; }
+li:hover { background: rgba(79, 70, 229, .05); }
 li.done span { text-decoration: line-through; color: #9ca3af; }
 .del { background: none; color: #9ca3af; padding: 0 6px; font-size: 1.3rem; }
 .del:hover { background: none; color: #dc2626; }
