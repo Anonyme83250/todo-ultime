@@ -9,5 +9,6 @@ L'appli de to-do list qui va tout changer.
 - [x] Ajouter une tâche
 - [x] Cocher une tâche
 - [x] Supprimer une tâche
-- [ ] Sauvegarder (là ça disparaît au rechargement)
-- [ ] Mode sombre
+- [x] Sauvegarder (dans le navigateur)
+- [x] Filtres
+- [x] Mode sombre
