@@ -12,3 +12,9 @@ L'appli de to-do list qui va tout changer.
 - [x] Sauvegarder (dans le navigateur)
 - [x] Filtres
 - [x] Mode sombre
+
+## Plus tard
+
+- [ ] Synchronisation multi-appareils
+- [ ] Une IA qui fait les tâches à ta place
+- [ ] Lever 2 millions

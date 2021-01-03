@@ -96,3 +96,5 @@ render();
 input.focus();
 
 // TODO : synchronisation multi-appareils
+// TODO : mode sombre automatique (prefers-color-scheme)
+// TODO : finir cette liste de TODO
